@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>magari</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://unpkg.com/i18next@21.6.4/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#Mechanics" data-i18n="nav.mechanics">Mechanics</a></li>
+                </ul>
+
+                <div class="logo">
+                    <a href="#" data-i18n="nav.logo">Magari</a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
+                    <li><a href="#community" data-i18n="nav.community">Community</a></li>
+                    <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    <button id="darkModeToggle">🌓</button>
+        <div id="languageSwitcher">
+            <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+            <button class="lang-btn" onclick="changeLanguage('sw')">SW</button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-card">
+                <img src="Assets/Images/ChatGPT Image May 25, 2025, 10_59_10 AM.png" 
+                    alt="Mechanic helping a client - Magari Hero Image"
+                    class="hero-image">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="hero.title">We Care, We Serve, and We Deliver.</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">We're Here for You</p>
+                    <p class="hero-description" data-i18n="hero.description">
+                        Whether you have questions, need help getting started, or want to learn more — reach out anytime.
+                    </p>
+                    <a href="#contact" class="btn" data-i18n="hero.button">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="max-w-6xl w-full mx-auto bg-white rounded-[2.5rem] shadow-xl overflow-hidden md:flex md:items-center p-8 md:p-12">
+                <div class="md:w-1/2 p-4 md:pr-12 mb-8 md:mb-0">
+                    <p class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2" data-i18n="about.tagline">HOW IT WORKS</p>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-custom-teal-dark mb-6" data-i18n="about.title">
+                        We'll help you because we Prioritize You and your Car's Health.
+                    </h2>
+                    <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-8" data-i18n="about.description">
+                        Browse mechanics, book a session, and start your repair journey with trusted professionals.  
+                    </p>
+                    <button id="findMechanicBtn" class="btn" data-i18n="about.button">
+                        Find A Mechanic
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center items-center p-4 bg-custom-teal-dark rounded-[2rem] min-h-[300px] md:min-h-[450px] lg:min-h-[550px]">
+                    <img src="Assets/Images/pexels-olly-3807811.jpg"
+                         alt="mechanic Illustration"
+                         class="w-full h-auto object-contain rounded-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">The path to your car Well-being</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Discover expert guidance for a healthier engine.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="services.card1.title">One-on-One consultation</h3>
+                    <p data-i18n="services.card1.desc">In-person consultation sessions with qualified mechanics.</p>
+                    <a href="#" class="btn btn-outline" data-i18n="services.card1.button">Learn more</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="services.card2.title">Get your car sorted</h3>
+                    <p data-i18n="services.card2.desc">Are you a first time car owner? Worry not!</p>
+                    <a href="#" class="btn btn-outline" data-i18n="services.card2.button">Learn more about cars</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="services.card3.title">Free car clinic</h3>
+                    <p data-i18n="services.card3.desc">Personalized guidance for efficient service and car care.</p>
+                    <a href="#" class="btn btn-outline" data-i18n="services.card3.button">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section how-it-works" id="Mechanics">
+        <div class="container">
+            <h2 class="section-title" data-i18n="howitworks.title">How It Works</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="howitworks.step1">Find a Mechanic</h3>
+                    <p data-i18n="howitworks.step1desc">Connect with licensed mechanics, dealers, and car buyers.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="howitworks.step2">Book a Session</h3>
+                    <p data-i18n="howitworks.step2desc">Schedule an appointment at a time that works for you.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-i18n="howitworks.step3">Get your car checked</h3>
+                    <p data-i18n="howitworks.step3desc">Drive without worries!</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn" data-i18n="howitworks.button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="header">
+                <h1 data-i18n="testimonials.title">TESTIMONIALS</h1>
+                <p data-i18n="testimonials.subtitle">What Our Clients Are Saying</p>
+                <p data-i18n="testimonials.description">Positive experiences from users who have benefited from free car clinics.</p>
+            </div>
+            
+            <div class="testimonial-nav">
+                <div class="nav-arrow"><i class="fas fa-chevron-left"></i></div>
+                <div class="nav-arrow"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-text" data-i18n="testimonials.card1">
+                        "Magari made it so easy to find the right mechanic for me. The sessions have truly made car servicing easy, and I feel more in control of my car than ever before!"
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Anna R.">
+                        <div class="client-details">
+                            <h4>Mary B, 32</h4>
+                            <p data-i18n="testimonials.client1">Client since 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text" data-i18n="testimonials.card2">
+                        "I was struggling finding a mechanic who understands my vehicle properly, but magari have helped me find everything cars."
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mark S.">
+                        <div class="client-details">
+                            <h4>Mark S., 41</h4>
+                            <p data-i18n="testimonials.client2">Client since 2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text" data-i18n="testimonials.card3">
+                        "The convenience and quality of care I've received from magari is unmatched. My technician understands what needs to be done perfectly and has helped me maintain my car's performance."
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah L.">
+                        <div class="client-details">
+                            <h4>Cate L., 28</h4>
+                            <p data-i18n="testimonials.client3">Client since 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+        <header>
+            <h1>Our Valued Partners</h1>
+            <p class="subtitle">We collaborate with the world's leading automotive brands to deliver exceptional products and services to our customers worldwide.</p>
+        </header>
+        
+        <div class="carousel-container">
+            <div class="partner-carousel">
+                <!-- Toyota -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/toyota.com" alt="Toyota" class="partner-logo">
+                    <div class="partner-name">Toyota</div>
+                </div>
+                
+                <!-- Mercedes -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/mercedes-benz.com" alt="Mercedes" class="partner-logo">
+                    <div class="partner-name">Mercedes-Benz</div>
+                </div>
+                
+                <!-- BMW -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/bmw.com" alt="BMW" class="partner-logo">
+                    <div class="partner-name">BMW</div>
+                </div>
+                
+                <!-- Tesla -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/tesla.com" alt="Tesla" class="partner-logo">
+                    <div class="partner-name">Tesla</div>
+                </div>
+                
+                <!-- General Motors -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/gm.com" alt="General Motors" class="partner-logo">
+                    <div class="partner-name">General Motors</div>
+                </div>
+                
+                <!-- Chevrolet -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/chevrolet.com" alt="Chevrolet" class="partner-logo">
+                    <div class="partner-name">Chevrolet</div>
+                </div>
+                
+                <!-- Kia -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/kia.com" alt="Kia" class="partner-logo">
+                    <div class="partner-name">Kia</div>
+                </div>
+                
+                <!-- Additional partners for seamless looping -->
+                <!-- Toyota -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/toyota.com" alt="Toyota" class="partner-logo">
+                    <div class="partner-name">Toyota</div>
+                </div>
+                
+                <!-- Mercedes -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/mercedes-benz.com" alt="Mercedes" class="partner-logo">
+                    <div class="partner-name">Mercedes-Benz</div>
+                </div>
+                
+                <!-- BMW -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/bmw.com" alt="BMW" class="partner-logo">
+                    <div class="partner-name">BMW</div>
+                </div>
+                
+                <!-- Tesla -->
+                <div class="partner-card">
+                    <img src="https://logo.clearbit.com/tesla.com" alt="Tesla" class="partner-logo">
+                    <div class="partner-name">Tesla</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" id="pauseBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                </svg>
+                Pause
+            </button>
+            <button class="control-btn" id="resumeBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                </svg>
+                Resume
+            </button>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Countries Served</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15M+</div>
+                <div class="stat-label">Vehicles Produced</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">35+</div>
+                <div class="stat-label">Years of Partnership</div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+            <p class="section-subtitle" data-i18n="faq.subtitle">Find answers to common questions about our services.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q1">How do I book a session with a mechanic?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-i18n="faq.a1">
+                        <p>You can book a repair session through our website by selecting a services and choosing an available time slot that works for you. Alternatively, you can call our support line for assistance with booking.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q2">Do you offer car detailing services?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-i18n="faq.a2">
+                        <p>Yes, we offer car detailing services.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q3">Do you sell cars?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-i18n="faq.a3">
+                        <p>Yes we do sell new and old cars, we also sell cars on behalf of our customers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section resources" id="resources">
+        <div class="container">
+            <h2 class="section-title" data-i18n="resources.title">Resources for car maintenance</h2>
+            <p class="section-subtitle" data-i18n="resources.subtitle">We provide a variety of resources to help you navigate your car journey.</p>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 data-i18n="resources.card1.title">Articles & Guides</h3>
+                    <p data-i18n="resources.card1.desc">Practical care tips for your car.</p>
+                    <a href="#" class="btn btn-outline" data-i18n="resources.card1.button">Explore</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3 data-i18n="resources.card2.title">Driving tips</h3>
+                    <p data-i18n="resources.card2.desc">Audio sessions on good driving practices and safety.</p>
+                    <a href="#" class="btn btn-outline" data-i18n="resources.card2.button">Explore</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 data-i18n="resources.card3.title">Webinars & Workshops</h3>
+                    <p data-i18n="resources.card3.desc">Live sessions on how to get good performance from your car.</p>
+                    <a href="#" class="btn btn-outline" data-i18n="resources.card3.button">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section community" id="community">
+        <div class="container">
+            <h2 class="section-title" data-i18n="community.title">You're Not Alone on This Journey</h2>
+            <p class="section-subtitle" data-i18n="community.subtitle">Anything cars count on us we listen, we care and we deliver.</p>
+            <a href="#" class="btn" data-i18n="community.button">Join the Community</a>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-i18n="contact.info">Contact Details:</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> support@Magari.com</p>
+                        <p><i class="fas fa-phone"></i> +254 7456-60801</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Waiyaki Way, Nairobi City.</p>
+                    </div>
+                    <p data-i18n="contact.response">We typically respond within 12 hours.</p>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 data-i18n="contact.formtitle">Send Us a Message</h3>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" data-i18n="contact.send">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" id="footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3 data-i18n="footer.magari">Magari</h3>
+                    <p data-i18n="footer.tagline">We help, We care.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.quicklinks">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#Mechanics" data-i18n="nav.mechanics">Mechanics</a></li>
+                        <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.support">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="nav.faq">FAQ</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-i18n="footer.terms">Terms of Use</a></li>
+                        <li><a href="#" data-i18n="footer.guidelines">Community Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer.newsletter">Newsletter</h3>
+                    <p data-i18n="footer.subscribe">Subscribe to our newsletter for car caring tips and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn" data-i18n="footer.subscribebtn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 RunTechnologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="js/script.js"></script>    
+</body>
+</html>
+
