@@ -1,2 +1,2 @@
 # Magari
-Garage platform where car owners meet professional automobile services
+Garage platform is where car owners meet professional automobile services
